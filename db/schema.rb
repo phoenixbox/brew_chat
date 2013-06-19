@@ -11,12 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120114225439) do
+ActiveRecord::Schema.define(:version => 20130619230814) do
 
   create_table "messages", :force => true do |t|
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "game_id"
+    t.string   "team_name"
   end
 
 end
