@@ -4,10 +4,7 @@ class MessagesController < ApplicationController
   end
 
   def create
-    Channel.publish(:add_message, params[:message])
-    message = Message.find(params[:message][:message_id])
-    flash[:notice] = "You added a message"
-    # @message = Message.create!(params[:message])
-    redirect_to messages_path
+    @message = Message.create!(params[:message])
+    redirect_to :back
   end
 end
