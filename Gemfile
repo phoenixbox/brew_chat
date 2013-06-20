@@ -11,6 +11,7 @@ gem 'pry'
 gem 'rest-client'
 gem 'redis'
 gem 'binding_of_caller'
+gem 'rest-client'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

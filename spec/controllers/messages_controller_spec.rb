@@ -4,9 +4,11 @@ require "spec_helper"
 describe MessagesController do 
   
   it "saves a message to the db" do  
-    params = {content: "This is a test message"}
-     expect{ post :create, message: params.to_json 
-    }.to change(Message,:count).by(1) 
+    params = {game_id: 1, team_name: "test team", content: "This is a message."}
+    original_count = Message.count
+    post :create, message: params.to_json 
+    sleep 2
+    expect( Message.count ).to eq(original_count + 1)
   end
 
   context "reading index for a game_id" do

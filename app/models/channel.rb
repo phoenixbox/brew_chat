@@ -16,3 +16,5 @@ class Channel
     end
   end
 end
+
+#Faye subscribe to redis channel / do http request to publish to brews
