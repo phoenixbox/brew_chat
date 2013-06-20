@@ -17,5 +17,4 @@ describe MessagesController do
       expect(json_response.first["team_name"]).to eq("test team")
     end
   end
-
 end

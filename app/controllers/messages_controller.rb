@@ -5,8 +5,9 @@ class MessagesController < ApplicationController
   end
 
   def create
+    Channel.publish(:add_message_to_game, params[:message])
+    #----
     data = JSON.parse(params[:message])
-    Channel.publish(:add_message_to_game, data)
     @message = Message.create!(data)
     render :json => @message
   end
