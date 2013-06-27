@@ -12,13 +12,16 @@ gem 'rest-client'
 gem 'redis'
 gem 'binding_of_caller'
 gem 'rest-client'
+gem 'thin'
+gem 'figaro'
+gem 'faye'
+gem 'eventmachine'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
 end
-
 
 group :development, :test do
   gem 'rspec-rails'

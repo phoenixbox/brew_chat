@@ -1,6 +1,8 @@
+require 'eventmachine'
+require 'faye'
 class MessageRecorder
   def self.record(message)
-    Message.create(message)
+    message = Message.create(message)
   end
 
   def self.run
