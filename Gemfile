@@ -24,6 +24,7 @@ group :assets do
 end
 
 group :development, :test do
+  gem 'simplecov', :require => false, :group => :test
   gem 'rspec-rails'
   gem 'capybara'
   gem 'launchy'
